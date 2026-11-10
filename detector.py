@@ -1,3 +1,4 @@
 with open("auth.log") as file:
     for line in file:
-        print(line.strip())
+        if "Failed password" in line:
+            print(line.strip())
